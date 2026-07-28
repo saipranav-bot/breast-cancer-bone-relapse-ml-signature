@@ -1,0 +1,32 @@
+ID,Gene Symbol,Gene Title
+203108_at,GPRC5A,"G protein-coupled receptor, class C, group 5, member A"
+204933_s_at,TNFRSF11B,"tumor necrosis factor receptor superfamily, member 11b"
+211637_x_at,IGH /// IGHA1 /// IGHA2 /// IGHD /// IGHG1 /// IGHG3 /// IGHG4 /// IGHM /// IGHV3-23 /// IGHV4-31,immunoglobulin heavy locus /// immunoglobulin heavy constant alpha 1 /// immunoglobulin heavy constant alpha 2 (A2m marker) /// immunoglobulin heavy constant delta /// immunoglobulin heavy constant gamma 1 (G1m marker) /// immunoglobulin heavy constant gamma 3 (G3m marker) /// immunoglobulin heavy constant gamma 4 (G4m marker) /// immunoglobulin heavy constant mu /// immunoglobulin heavy variable 3-23 /// immunoglobulin heavy variable 4-31
+211644_x_at,IGK /// IGKC,immunoglobulin kappa locus /// immunoglobulin kappa constant
+211798_x_at,IGLJ3,immunoglobulin lambda joining 3
+211868_x_at,IGH /// IGHA1 /// IGHA2 /// IGHD /// IGHG1 /// IGHG2 /// IGHG3 /// IGHM /// IGHV4-31,immunoglobulin heavy locus /// immunoglobulin heavy constant alpha 1 /// immunoglobulin heavy constant alpha 2 (A2m marker) /// immunoglobulin heavy constant delta /// immunoglobulin heavy constant gamma 1 (G1m marker) /// immunoglobulin heavy constant gamma 2 (G2m marker) /// immunoglobulin heavy constant gamma 3 (G3m marker) /// immunoglobulin heavy constant mu /// immunoglobulin heavy variable 4-31
+211881_x_at,IGLJ3,immunoglobulin lambda joining 3
+211908_x_at,IGK,immunoglobulin kappa locus
+214669_x_at,IGKC,immunoglobulin kappa constant
+214777_at,abParts /// IGKC /// IGKV4-1 /// IGKV4-1,"Parts of antibodies, mostly variable regions. /// immunoglobulin kappa constant /// immunoglobulin kappa variable 4-1 ///"
+214858_at,PP14571,uncharacterized LOC100130449
+214973_x_at,IGHD,immunoglobulin heavy constant delta
+215121_x_at,CYAT1 /// IGLC1 /// IGLV1-44,immunoglobulin lambda light chain-like /// immunoglobulin lambda constant 1 (Mcg marker) /// immunoglobulin lambda variable 1-44
+215176_x_at,IGK /// IGKC,immunoglobulin kappa locus /// immunoglobulin kappa constant
+215214_at,IGLC1 /// IGLV3-25 /// IGLV3-25,immunoglobulin lambda constant 1 (Mcg marker) /// immunoglobulin lambda variable 3-25 ///
+215379_x_at,IGLV1-44,immunoglobulin lambda variable 1-44
+215949_x_at,IGHM,immunoglobulin heavy constant mu
+216207_x_at,IGKC,immunoglobulin kappa constant
+216365_x_at,CKAP2 /// IGLJ3 /// IGLV3-19 /// IGLV3-19,cytoskeleton associated protein 2 /// immunoglobulin lambda joining 3 ///  /// immunoglobulin lambda variable 3-19
+216401_x_at,IGKV1-37 /// IGKV1-37 /// IGKV1D-37 /// IGKV1D-37,immunoglobulin kappa variable 1-37 (non-functional) ///  /// immunoglobulin kappa variable 1D-37 (non-functional) ///
+216491_x_at,IGHM,immunoglobulin heavy constant mu
+216510_x_at,IGHA1 /// IGHG1 /// IGHM /// IGHV3-23 /// IGHV4-31,immunoglobulin heavy constant alpha 1 /// immunoglobulin heavy constant gamma 1 (G1m marker) /// immunoglobulin heavy constant mu /// immunoglobulin heavy variable 3-23 /// immunoglobulin heavy variable 4-31
+216560_x_at,IGLC1 /// IGLV3-10 /// IGLV3-10,immunoglobulin lambda constant 1 (Mcg marker) /// immunoglobulin lambda variable 3-10 ///
+216576_x_at,IGK /// IGKC,immunoglobulin kappa locus /// immunoglobulin kappa constant
+216984_x_at,CKAP2 /// IGLC1 /// IGLJ2 /// IGLJ2 /// IGLJ3 /// IGLJ3 /// IGLJ3 /// IGLV1-44 /// IGLV2-14 /// IGLV@,cytoskeleton associated protein 2 /// immunoglobulin lambda constant 1 (Mcg marker) ///  /// immunoglobulin lambda joining 2 /// immunoglobulin lambda joining 3 /// immunoglobulin lambda joining 3 ///  /// immunoglobulin lambda variable 1-44 ///  /// immunoglobulin lambda variable cluster
+217148_x_at,IGLC1 /// IGLJ3 /// IGLV2-14 /// IGLV@,immunoglobulin lambda constant 1 (Mcg marker) /// immunoglobulin lambda joining 3 ///  /// immunoglobulin lambda variable cluster
+217157_x_at,IGK /// IGKC,immunoglobulin kappa locus /// immunoglobulin kappa constant
+217235_x_at,IGLL5,immunoglobulin lambda-like polypeptide 5
+217258_x_at,IGLV1-44,immunoglobulin lambda variable 1-44
+217378_x_at,IGKV1OR2-108 /// IGKV1OR2-108,immunoglobulin kappa variable 1/OR2-108 (non-functional) ///
+217480_x_at,AC128677.4 /// CH17-132F21.1 /// IGKV1OR-1 /// IGKV1OR-1 /// IGKV1OR10-1 /// IGKV1OR10-1 /// IGKV1OR2-2,///  /// immunoglobulin kappa variable 1/OR-1 (pseudogene) ///  /// immunoglobulin kappa variable 1/OR10-1 (pseudogene) ///  /// immunoglobulin kappa variable 1/OR2-2 (pseudogene)

@@ -1,0 +1,17 @@
+Gene,Logistic_selected,RF_selected,SVM_selected,Consensus_score
+GPRC5A,True,True,True,3
+IGLV1-44,True,True,True,3
+TNFRSF11B,True,True,True,3
+IGKC,True,True,True,3
+PP14571,True,True,True,3
+IGLC1,True,False,True,2
+IGLL5,False,True,True,2
+IGLJ3,True,False,True,2
+IGHD,True,True,False,2
+IGKV1-37,False,False,True,1
+IGK,False,True,False,1
+AC128677.4,True,False,False,1
+IGKV1OR2-108,False,True,False,1
+CKAP2,False,False,True,1
+abParts,True,False,False,1
+CYAT1,False,True,False,1

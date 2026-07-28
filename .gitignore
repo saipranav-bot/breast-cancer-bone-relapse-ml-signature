@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Large datasets
+data/raw/
+data/processed/GSE2034_expression_matrix.csv
+data/processed/GSE2034_expression_log2.csv
+data/processed/GSE2034_ML_dataset.csv
+data/processed/final_ML_matrix.csv
+
+# Temporary files
+*.tmp
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
