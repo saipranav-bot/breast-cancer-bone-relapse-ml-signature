@@ -193,7 +193,7 @@ plt.tight_layout()
 
 
 plt.savefig(
-    "results/svm_ROC.png",
+    "results/figures/svm_ROC.png",
     dpi=300
 )
 
@@ -219,7 +219,7 @@ importance = importance.sort_values(
 
 
 importance.to_csv(
-    "results/svm_gene_importance.csv",
+    "results/tables/svm_gene_importance.csv",
     index=False
 )
 
@@ -232,5 +232,5 @@ print(
 
 
 print("\nSaved:")
-print("results/svm_ROC.png")
-print("results/svm_gene_importance.csv")
+print("results/figures/svm_ROC.png")
+print("results/tables/svm_gene_importance.csv")

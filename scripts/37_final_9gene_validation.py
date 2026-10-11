@@ -41,7 +41,7 @@ labels["sample_id"] = (
 # annotation
 
 anno = pd.read_csv(
-    "results/GPL96_clean_annotation.csv"
+    "results/tables/GPL96_clean_annotation.csv"
 )
 
 anno["Gene Symbol"] = (
@@ -127,7 +127,7 @@ print(merged.shape)
 # coefficients
 
 coef = pd.read_csv(
-    "results/9gene_signature_coefficients.csv"
+    "results/tables/9gene_signature_coefficients.csv"
 )
 
 
@@ -155,7 +155,7 @@ for gene, weight in coef_dict.items():
 # save scores FIRST
 
 merged.to_csv(
-    "results/final_9gene_validation_scores.csv",
+    "results/tables/final_9gene_validation_scores.csv",
     index=False
 )
 
@@ -215,7 +215,7 @@ plt.legend()
 plt.tight_layout()
 
 plt.savefig(
-    "results/final_9gene_validation_ROC.png",
+    "results/figures/final_9gene_validation_ROC.png",
     dpi=300
 )
 
@@ -274,7 +274,7 @@ plt.tight_layout()
 
 
 plt.savefig(
-    "results/final_9gene_validation_heatmap.png",
+    "results/figures/final_9gene_validation_heatmap.png",
     dpi=300
 )
 
@@ -284,7 +284,7 @@ plt.close()
 
 
 print("\nSaved:")
-print("results/final_9gene_validation_scores.csv")
-print("results/final_9gene_validation_ROC.png")
-print("results/final_9gene_validation_heatmap.png")
+print("results/tables/final_9gene_validation_scores.csv")
+print("results/figures/final_9gene_validation_ROC.png")
+print("results/figures/final_9gene_validation_heatmap.png")
 

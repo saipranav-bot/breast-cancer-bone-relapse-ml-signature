@@ -10,7 +10,7 @@ print("Loading risk scores...")
 
 
 risk = pd.read_csv(
-    "results/9gene_risk_scores.csv"
+    "results/tables/9gene_risk_scores.csv"
 )
 
 
@@ -72,7 +72,7 @@ plt.legend()
 
 
 plt.savefig(
-    "results/9gene_validation_ROC.png",
+    "results/figures/9gene_validation_ROC.png",
     dpi=300,
     bbox_inches="tight"
 )
@@ -150,17 +150,17 @@ metrics = pd.DataFrame({
 
 
 metrics.to_csv(
-    "results/9gene_ROC_metrics.csv",
+    "results/tables/9gene_ROC_metrics.csv",
     index=False
 )
 
 
 print("\nSaved:")
 print(
-    "results/9gene_validation_ROC.png"
+    "results/figures/9gene_validation_ROC.png"
 )
 
 print(
-    "results/9gene_ROC_metrics.csv"
+    "results/tables/9gene_ROC_metrics.csv"
 )
 

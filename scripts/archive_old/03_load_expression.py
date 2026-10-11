@@ -5,7 +5,7 @@ import os
 
 gse = GEOparse.get_GEO(
     geo="GSE2034",
-    destdir="../data/raw/",
+    destdir="data/raw/",
     silent=False
 )
 
@@ -45,10 +45,10 @@ print(expression_df.head())
 
 
 os.makedirs(
-    "../data/processed",
+    "data/processed",
     exist_ok=True
 )
 
 expression_df.to_csv(
-    "../data/processed/GSE2034_expression_full.csv"
+    "data/processed/GSE2034_expression_full.csv"
 )

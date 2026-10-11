@@ -46,13 +46,11 @@ plt.title(
     "GSE2034 Expression Distribution"
 )
 
-os.makedirs(
-    "results",
-    exist_ok=True
-)
+os.makedirs("results/tables", exist_ok=True)
+os.makedirs("results/figures", exist_ok=True)
 
 plt.savefig(
-    "results/expression_distribution.png",
+    "results/figures/expression_distribution.png",
     dpi=300,
     bbox_inches="tight"
 )
@@ -112,7 +110,7 @@ plt.title(
 
 
 plt.savefig(
-    "results/PCA_GSE2034.png",
+    "results/figures/PCA_GSE2034.png",
     dpi=300,
     bbox_inches="tight"
 )

@@ -2,7 +2,7 @@ import pandas as pd
 
 
 importance = pd.read_csv(
-    "results/logistic_gene_importance.csv"
+    "results/tables/logistic_gene_importance.csv"
 )
 
 

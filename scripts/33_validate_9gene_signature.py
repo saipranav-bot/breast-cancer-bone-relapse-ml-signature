@@ -31,7 +31,7 @@ labels = pd.read_csv(
 # ==========================
 
 coef = pd.read_csv(
-    "results/9gene_signature_coefficients.csv"
+    "results/tables/9gene_signature_coefficients.csv"
 )
 
 
@@ -48,7 +48,7 @@ print(genes)
 # ==========================
 
 anno = pd.read_csv(
-    "results/GPL96_clean_annotation.csv"
+    "results/tables/GPL96_clean_annotation.csv"
 )
 
 
@@ -268,7 +268,7 @@ print(
 # save scores
 
 risk.to_csv(
-    "results/9gene_risk_scores.csv",
+    "results/tables/9gene_risk_scores.csv",
     index=False
 )
 
@@ -296,7 +296,7 @@ plt.title(
 
 
 plt.savefig(
-    "results/9gene_risk_score_boxplot.png",
+    "results/figures/9gene_risk_score_boxplot.png",
     dpi=300,
     bbox_inches="tight"
 )
@@ -348,7 +348,7 @@ plt.title(
 
 
 plt.savefig(
-    "results/9gene_validation_heatmap.png",
+    "results/figures/9gene_validation_heatmap.png",
     dpi=300,
     bbox_inches="tight"
 )
@@ -359,7 +359,7 @@ plt.close()
 
 
 print("\nSaved:")
-print("results/9gene_risk_scores.csv")
-print("results/9gene_risk_score_boxplot.png")
-print("results/9gene_validation_heatmap.png")
+print("results/tables/9gene_risk_scores.csv")
+print("results/figures/9gene_risk_score_boxplot.png")
+print("results/figures/9gene_validation_heatmap.png")
 

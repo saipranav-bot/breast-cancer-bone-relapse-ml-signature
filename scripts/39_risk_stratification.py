@@ -8,7 +8,7 @@ print("Loading validation scores...")
 
 
 data = pd.read_csv(
-    "results/final_9gene_validation_scores.csv"
+    "results/tables/final_9gene_validation_scores.csv"
 )
 
 
@@ -44,7 +44,7 @@ print(
 # save stratified table
 
 data.to_csv(
-    "results/9gene_risk_stratification.csv",
+    "results/tables/9gene_risk_stratification.csv",
     index=False
 )
 
@@ -101,7 +101,7 @@ plt.tight_layout()
 
 
 plt.savefig(
-    "results/9gene_risk_score_distribution.png",
+    "results/figures/9gene_risk_score_distribution.png",
     dpi=300,
     bbox_inches="tight"
 )
@@ -151,7 +151,7 @@ plt.tight_layout()
 
 
 plt.savefig(
-    "results/9gene_risk_group_boxplot.png",
+    "results/figures/9gene_risk_group_boxplot.png",
     dpi=300,
     bbox_inches="tight"
 )
@@ -161,7 +161,7 @@ plt.close()
 
 
 print("\nSaved:")
-print("results/9gene_risk_score_distribution.png")
-print("results/9gene_risk_group_boxplot.png")
-print("results/9gene_risk_stratification.csv")
+print("results/figures/9gene_risk_score_distribution.png")
+print("results/figures/9gene_risk_group_boxplot.png")
+print("results/tables/9gene_risk_stratification.csv")
 

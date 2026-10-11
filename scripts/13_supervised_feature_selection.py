@@ -104,19 +104,17 @@ print(
 )
 
 
-os.makedirs(
-    "results",
-    exist_ok=True
-)
+os.makedirs("results/tables", exist_ok=True)
+os.makedirs("results/figures", exist_ok=True)
 
 
 selected.to_csv(
-    "results/selected_relapse_genes.csv",
+    "results/tables/selected_relapse_genes.csv",
     index=False
 )
 
 
 print("\nSaved:")
 print(
-    "results/selected_relapse_genes.csv"
+    "results/tables/selected_relapse_genes.csv"
 )

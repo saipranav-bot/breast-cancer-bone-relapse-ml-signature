@@ -133,7 +133,7 @@ plt.grid()
 
 
 plt.savefig(
-    "results/logistic_ROC.png",
+    "results/figures/logistic_ROC.png",
     dpi=300,
     bbox_inches="tight"
 )
@@ -162,11 +162,11 @@ importance = importance.sort_values(
 
 
 importance.to_csv(
-    "results/logistic_gene_importance.csv",
+    "results/tables/logistic_gene_importance.csv",
     index=False
 )
 
 
 print("\nSaved:")
-print("results/logistic_ROC.png")
-print("results/logistic_gene_importance.csv")
+print("results/figures/logistic_ROC.png")
+print("results/tables/logistic_gene_importance.csv")

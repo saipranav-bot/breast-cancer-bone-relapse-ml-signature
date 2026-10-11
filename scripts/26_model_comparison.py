@@ -77,10 +77,10 @@ plt.tight_layout()
 
 
 plt.savefig(
-    "results/model_comparison.png",
+    "results/figures/model_comparison.png",
     dpi=300
 )
 
 
 print("\nSaved:")
-print("results/model_comparison.png")
+print("results/figures/model_comparison.png")

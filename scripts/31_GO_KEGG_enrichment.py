@@ -42,7 +42,7 @@ print("\nTop GO terms:")
 print(go_results[['Term','Adjusted P-value']].head(10))
 
 go_results.to_csv(
-    "results/9gene_GO_enrichment.csv",
+    "results/tables/9gene_GO_enrichment.csv",
     index=False
 )
 
@@ -67,7 +67,7 @@ print(kegg_results[['Term','Adjusted P-value']].head(10))
 
 
 kegg_results.to_csv(
-    "results/9gene_KEGG_enrichment.csv",
+    "results/tables/9gene_KEGG_enrichment.csv",
     index=False
 )
 
@@ -91,7 +91,7 @@ plt.title("9-Gene Signature GO Enrichment")
 plt.tight_layout()
 
 plt.savefig(
-    "results/9gene_GO_barplot.png",
+    "results/figures/9gene_GO_barplot.png",
     dpi=300
 )
 
@@ -99,6 +99,6 @@ plt.close()
 
 
 print("\nSaved:")
-print("results/9gene_GO_enrichment.csv")
-print("results/9gene_KEGG_enrichment.csv")
-print("results/9gene_GO_barplot.png")
+print("results/tables/9gene_GO_enrichment.csv")
+print("results/tables/9gene_KEGG_enrichment.csv")
+print("results/figures/9gene_GO_barplot.png")

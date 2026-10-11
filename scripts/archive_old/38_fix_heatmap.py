@@ -4,7 +4,7 @@ import seaborn as sns
 
 
 data = pd.read_csv(
-    "results/final_9gene_validation_scores.csv"
+    "results/tables/final_9gene_validation_scores.csv"
 )
 
 
@@ -65,7 +65,7 @@ plt.tight_layout()
 
 
 plt.savefig(
-    "results/final_validation_heatmap_fixed.png",
+    "results/figures/final_validation_heatmap_fixed.png",
     dpi=300
 )
 
@@ -74,4 +74,4 @@ plt.close()
 
 
 print("Saved:")
-print("results/final_validation_heatmap_fixed.png")
+print("results/figures/final_validation_heatmap_fixed.png")

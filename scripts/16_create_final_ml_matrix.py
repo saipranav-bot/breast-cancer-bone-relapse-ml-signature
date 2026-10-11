@@ -17,7 +17,7 @@ print(expression.shape)
 print("\nLoading selected probes...")
 
 selected = pd.read_csv(
-    "results/selected_relapse_genes.csv"
+    "results/tables/selected_relapse_genes.csv"
 )
 
 
@@ -53,7 +53,7 @@ print(ml_features.shape)
 # Load annotation
 
 annotation = pd.read_csv(
-    "results/GPL96_clean_annotation.csv"
+    "results/tables/GPL96_clean_annotation.csv"
 )
 
 

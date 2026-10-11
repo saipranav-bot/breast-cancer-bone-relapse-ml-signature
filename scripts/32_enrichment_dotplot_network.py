@@ -9,11 +9,11 @@ print("Loading enrichment results...")
 
 
 go = pd.read_csv(
-    "results/9gene_GO_enrichment.csv"
+    "results/tables/9gene_GO_enrichment.csv"
 )
 
 kegg = pd.read_csv(
-    "results/9gene_KEGG_enrichment.csv"
+    "results/tables/9gene_KEGG_enrichment.csv"
 )
 
 
@@ -64,7 +64,7 @@ plt.tight_layout()
 
 
 plt.savefig(
-    "results/9gene_GO_dotplot.png",
+    "results/figures/9gene_GO_dotplot.png",
     dpi=300,
     bbox_inches="tight"
 )
@@ -117,7 +117,7 @@ plt.tight_layout()
 
 
 plt.savefig(
-    "results/9gene_KEGG_dotplot.png",
+    "results/figures/9gene_KEGG_dotplot.png",
     dpi=300,
     bbox_inches="tight"
 )
@@ -313,7 +313,7 @@ plt.title(
 
 
 plt.savefig(
-    "results/9gene_GO_network_improved.png",
+    "results/figures/9gene_GO_network_improved.png",
     dpi=300,
     bbox_inches="tight"
 )
@@ -324,6 +324,6 @@ plt.close()
 
 
 print("\nSaved:")
-print("results/9gene_GO_dotplot.png")
-print("results/9gene_KEGG_dotplot.png")
-print("results/9gene_GO_network_improved.png")
+print("results/figures/9gene_GO_dotplot.png")
+print("results/figures/9gene_KEGG_dotplot.png")
+print("results/figures/9gene_GO_network_improved.png")

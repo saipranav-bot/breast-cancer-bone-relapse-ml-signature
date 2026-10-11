@@ -6,19 +6,19 @@ print("Loading feature importance files...")
 
 # Logistic regression
 logistic = pd.read_csv(
-    "results/logistic_gene_importance.csv"
+    "results/tables/logistic_gene_importance.csv"
 )
 
 
 # Random forest
 rf = pd.read_csv(
-    "results/random_forest_gene_importance.csv"
+    "results/tables/random_forest_gene_importance.csv"
 )
 
 
 # SVM
 svm = pd.read_csv(
-    "results/svm_gene_importance.csv"
+    "results/tables/svm_gene_importance.csv"
 )
 
 
@@ -102,7 +102,7 @@ print(consensus)
 
 
 consensus.to_csv(
-    "results/consensus_biomarkers.csv",
+    "results/tables/consensus_biomarkers.csv",
     index=False
 )
 
@@ -110,5 +110,5 @@ consensus.to_csv(
 
 print("\nSaved:")
 print(
-    "results/consensus_biomarkers.csv"
+    "results/tables/consensus_biomarkers.csv"
 )

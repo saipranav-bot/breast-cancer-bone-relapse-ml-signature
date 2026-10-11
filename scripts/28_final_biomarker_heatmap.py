@@ -95,12 +95,12 @@ plt.tight_layout()
 
 
 plt.savefig(
-    "results/final_biomarker_heatmap.png",
+    "results/figures/final_biomarker_heatmap.png",
     dpi=300
 )
 
 
 print("\nSaved:")
 print(
-    "results/final_biomarker_heatmap.png"
+    "results/figures/final_biomarker_heatmap.png"
 )

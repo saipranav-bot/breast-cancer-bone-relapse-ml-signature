@@ -29,7 +29,7 @@ print(annotation.columns)
 # Load selected probes
 
 sig = pd.read_csv(
-    "results/selected_relapse_genes.csv"
+    "results/tables/selected_relapse_genes.csv"
 )
 
 
@@ -63,12 +63,12 @@ mapped = mapped[
 
 
 mapped.to_csv(
-    "results/GPL96_clean_annotation.csv",
+    "results/tables/GPL96_clean_annotation.csv",
     index=False
 )
 
 
 print("\nSaved:")
 print(
-    "results/GPL96_clean_annotation.csv"
+    "results/tables/GPL96_clean_annotation.csv"
 )

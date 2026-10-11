@@ -167,7 +167,7 @@ plt.title(
 plt.legend()
 
 plt.savefig(
-    "results/9gene_signature_ROC.png",
+    "results/figures/9gene_signature_ROC.png",
     dpi=300,
     bbox_inches="tight"
 )
@@ -200,11 +200,11 @@ coef = coef.sort_values(
 
 
 coef.to_csv(
-    "results/9gene_signature_coefficients.csv",
+    "results/tables/9gene_signature_coefficients.csv",
     index=False
 )
 
 
 print("\nSaved:")
-print("results/9gene_signature_ROC.png")
-print("results/9gene_signature_coefficients.csv")
+print("results/figures/9gene_signature_ROC.png")
+print("results/tables/9gene_signature_coefficients.csv")

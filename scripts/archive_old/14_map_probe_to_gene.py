@@ -9,7 +9,7 @@ print("Loading significant genes...")
 # Load selected probes
 
 sig_genes = pd.read_csv(
-    "results/selected_relapse_genes.csv"
+    "results/tables/selected_relapse_genes.csv"
 )
 
 
@@ -85,19 +85,17 @@ final = sig_genes.merge(
 )
 
 
-os.makedirs(
-    "results",
-    exist_ok=True
-)
+os.makedirs("results/tables", exist_ok=True)
+os.makedirs("results/figures", exist_ok=True)
 
 
 final.to_csv(
-    "results/relapse_genes_mapped.csv",
+    "results/tables/relapse_genes_mapped.csv",
     index=False
 )
 
 
 print("\nSaved:")
 print(
-    "results/relapse_genes_mapped.csv"
+    "results/tables/relapse_genes_mapped.csv"
 )

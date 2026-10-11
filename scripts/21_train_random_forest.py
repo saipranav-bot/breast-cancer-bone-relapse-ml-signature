@@ -147,7 +147,7 @@ plt.grid()
 
 
 plt.savefig(
-    "results/random_forest_ROC.png",
+    "results/figures/random_forest_ROC.png",
     dpi=300,
     bbox_inches="tight"
 )
@@ -171,12 +171,12 @@ importance = importance.sort_values(
 
 
 importance.to_csv(
-    "results/random_forest_gene_importance.csv",
+    "results/tables/random_forest_gene_importance.csv",
     index=False
 )
 
 
 
 print("\nSaved:")
-print("results/random_forest_ROC.png")
-print("results/random_forest_gene_importance.csv")
+print("results/figures/random_forest_ROC.png")
+print("results/tables/random_forest_gene_importance.csv")

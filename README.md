@@ -390,10 +390,12 @@ Mean ROC-AUC:
 
 --------------------------------------------------
 
-# Stage 9 — External Validation Approach
+# Stage 9 — Internal Re-evaluation of the Signature
 
 
-The signature was tested again using the complete expression dataset.
+NOTE: this is **not** an independent external validation. The signature was
+re-scored on the *same* 286-patient GSE2034 cohort it was derived from, so the
+reported AUC is an internal (optimistic) estimate. See "Limitations" below.
 
 
 Process:
@@ -404,7 +406,7 @@ Process:
 4. Evaluate predictive performance.
 
 
-Final validation:
+Internal re-evaluation:
 
 ROC-AUC:
 
@@ -513,29 +515,44 @@ Bioinformatics resources:
 data/
 
     raw/
-        GEO expression files
-        GPL96 annotation
+        GSE2034 series matrix (expression + clinical characteristics)
+        GPL96 platform annotation
 
     processed/
         cleaned expression matrices
-        clinical labels
+        clinical metadata and labels
+
+    ml/
+        train/test feature and label matrices
 
 
 scripts/
 
-    Data processing scripts
-    Machine learning scripts
-    Validation scripts
-    Enrichment analysis scripts
+    Numbered analysis scripts (canonical order in scripts/run_all.sh).
+    Earlier/alternative variants are kept under scripts/archive_old/ for
+    reference and are not part of the current workflow.
 
 
 results/
 
-    ROC curves
-    Heatmaps
-    Biomarker tables
-    Enrichment plots
-    Risk stratification plots
+    tables/     CSV result tables
+    figures/    ROC curves, heatmaps, enrichment and risk-stratification plots
+
+
+## Reproducibility
+
+Environment:
+
+    conda env create -f environment.yml
+    conda activate cancer_ml
+
+Run the full pipeline from the repository root:
+
+    bash scripts/run_all.sh
+
+This downloads GSE2034 and the GPL96 annotation and rewrites every file under
+data/ and results/. Steps 31–32 query Enrichr online; all other steps run
+offline. The canonical script order is defined in scripts/run_all.sh.
 
 
 
@@ -582,12 +599,46 @@ Validation ROC-AUC:
 
 --------------------------------------------------
 
+# Limitations
+
+
+These results should be interpreted as an exploratory analysis, not a validated
+clinical signature.
+
+* **No independent cohort.** The signature was selected and evaluated on the
+  same 286 GSE2034 patients. Feature selection (variance filtering, supervised
+  selection, model-based gene ranking) used the full cohort before the held-out
+  split, so the reported AUCs are optimistically biased.
+* **The signature is dominated by immunoglobulin genes** (IGKV1OR2-108, IGK,
+  IGKV1-37, IGHM, IGH, IGLC1, IGLV1-44, IGHA1, IGKC, IGLJ3, IGHD, IGLL5). In
+  breast cancer, immunoglobulin / B-cell infiltration is strongly associated
+  with the ER-negative, immune-enriched phenotype. The signature therefore
+  likely reflects immune and hormone-receptor biology rather than a bone-
+  specific relapse mechanism, and may be confounded by ER status, which was not
+  adjusted for.
+* **Modest discrimination.** Test per-model ROC-AUC values are between ~0.64
+  and 0.71, which is weak for a clinical classifier.
+* **Uncharacterized features.** The mapped feature set includes non-informative
+  annotation entries such as `PP14571`, `abParts`, `AC128677.4` and `CYAT1`,
+  reflecting incomplete GPL96 probe annotation rather than validated genes.
+* **Platform detectable genes only.** Several signature members are absent or
+  unreliable on the Affymetrix U133A platform, so only a subset is carried into
+  the validation heatmap.
+
+Follow-up work would require an independent, ER-status-adjusted validation
+cohort before any biological or clinical claim can be made.
+
+---
+
 # Conclusion
 
 
 This project demonstrates a complete bioinformatics and machine learning workflow for discovering a gene expression signature associated with breast cancer bone relapse.
 
-The identified 9-gene signature provides potential biomarkers for relapse prediction and highlights immune-related and bone-remodeling pathways involved in disease progression.
+The identified 9-gene signature is enriched for immune / immunoglobulin genes
+and recovers immune-related and bone-remodeling pathways, but given the
+limitations above it should be treated as a hypothesis-generating result rather
+than a validated biomarker.
 
 
 

@@ -5,7 +5,7 @@ import os
 # Load dataset
 gse = GEOparse.get_GEO(
     geo="GSE2034",
-    destdir="../data/raw/",
+    destdir="data/raw/",
     silent=True,
     how="quick"
 )
@@ -47,10 +47,10 @@ print(expression_df.shape)
 
 # Save matrix
 
-os.makedirs("../data/processed", exist_ok=True)
+os.makedirs("data/processed", exist_ok=True)
 
 expression_df.to_csv(
-    "../data/processed/GSE2034_expression.csv"
+    "data/processed/GSE2034_expression.csv"
 )
 
 print("\nSaved successfully")
