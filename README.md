@@ -529,8 +529,9 @@ data/
 scripts/
 
     Numbered analysis scripts (canonical order in scripts/run_all.sh).
-    Earlier/alternative variants are kept under scripts/archive_old/ for
-    reference and are not part of the current workflow.
+    Superseded/exploratory variants were removed to keep the workflow
+    unambiguous; they remain retrievable from earlier commits in the git
+    history.
 
 
 results/

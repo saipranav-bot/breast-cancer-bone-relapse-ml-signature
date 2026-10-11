@@ -44,8 +44,6 @@ STEPS=(
   30_cv_9gene_signature
   31_GO_KEGG_enrichment
   32_enrichment_dotplot_network
-  33_validate_9gene_signature
-  34_9gene_validation_ROC
   37_final_9gene_validation
   39_risk_stratification
 )

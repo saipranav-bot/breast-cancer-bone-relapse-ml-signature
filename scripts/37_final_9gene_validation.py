@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 from sklearn.metrics import roc_auc_score, roc_curve
+from sklearn.utils import resample
 
 
 print("Loading expression...")
@@ -223,6 +224,52 @@ plt.close()
 
 
 
+# ==========================
+# ROC metrics with bootstrap CI
+# ==========================
+
+boot_auc = []
+
+for i in range(1000):
+
+    sample = resample(
+        merged[["bone_relapse", "Risk_score"]],
+        replace=True,
+        random_state=i
+    )
+
+    if sample["bone_relapse"].nunique() < 2:
+        continue
+
+    boot_auc.append(
+        roc_auc_score(
+            sample["bone_relapse"],
+            sample["Risk_score"]
+        )
+    )
+
+
+lower = np.percentile(boot_auc, 2.5)
+
+upper = np.percentile(boot_auc, 97.5)
+
+print("\n95% Confidence Interval:")
+print(round(lower, 3), "-", round(upper, 3))
+
+
+metrics = pd.DataFrame({
+    "Metric": ["AUC", "Lower_CI", "Upper_CI"],
+    "Value": [auc, lower, upper]
+})
+
+
+metrics.to_csv(
+    "results/tables/9gene_ROC_metrics.csv",
+    index=False
+)
+
+
+
 # Heatmap
 
 available_genes = [
@@ -285,6 +332,7 @@ plt.close()
 
 print("\nSaved:")
 print("results/tables/final_9gene_validation_scores.csv")
+print("results/tables/9gene_ROC_metrics.csv")
 print("results/figures/final_9gene_validation_ROC.png")
 print("results/figures/final_9gene_validation_heatmap.png")
 
