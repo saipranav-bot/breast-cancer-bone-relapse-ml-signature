@@ -88,9 +88,9 @@ consensus = pd.DataFrame(
 
 
 consensus = consensus.sort_values(
-    "Consensus_score",
-    ascending=False
-)
+    ["Consensus_score", "Gene"],
+    ascending=[False, True]
+).reset_index(drop=True)
 
 
 
